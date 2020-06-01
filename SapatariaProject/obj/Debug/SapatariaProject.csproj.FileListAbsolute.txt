@@ -1,0 +1,16 @@
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\bin\Debug\SapatariaProject.exe.config
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\bin\Debug\SapatariaProject.exe
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\bin\Debug\SapatariaProject.pdb
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\bin\Debug\MySql.Data.dll
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\bin\Debug\Google.Protobuf.dll
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\bin\Debug\Renci.SshNet.dll
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\bin\Debug\MySql.Data.xml
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.csprojAssemblyReference.cache
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.frmCadastroClientes.resources
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.Properties.Resources.resources
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.csproj.GenerateResource.cache
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.csproj.CopyComplete
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.exe
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.pdb
