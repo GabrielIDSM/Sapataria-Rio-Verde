@@ -66,11 +66,17 @@
     <Compile Include="UI\frmCadastroVendedores.Designer.cs">
       <DependentUpon>frmCadastroVendedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\frmPrincipal.cs">
+    <Compile Include="UI\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmPrincipal.Designer.cs">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <Compile Include="UI\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmTelaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmTelaInicial.Designer.cs">
+      <DependentUpon>frmTelaInicial.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="UI\frmCadastroClientes.resx">
       <DependentUpon>frmCadastroClientes.cs</DependentUpon>
@@ -87,8 +93,11 @@
     <EmbeddedResource Include="UI\frmCadastroVendedores.resx">
       <DependentUpon>frmCadastroVendedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="UI\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmTelaInicial.resx">
+      <DependentUpon>frmTelaInicial.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

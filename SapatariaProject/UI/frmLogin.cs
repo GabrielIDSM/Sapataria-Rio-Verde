@@ -12,30 +12,19 @@ using SapatariaProject.BLL;
 
 namespace SapatariaProject.UI
 {
-    public partial class frmPrincipal : Form
+    public partial class frmLogin : Form
     {
         //Atributos
         VendedoresDTO vendDto = new VendedoresDTO();
         VendedoresBLL vendBll = new VendedoresBLL();
         //Construtor
-        public frmPrincipal()
+        public frmLogin()
         {
             InitializeComponent();
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            //Verificar se há cadastro
-            Boolean temCadastro = true;
-            //Instancia dos novos forms
-            if (temCadastro)
-            {
-                this.Close();
-            }
-            else
-            {
-
-            }
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace SapatariaProject.UI
 {
-    partial class frmPrincipal
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.pPrincipal = new System.Windows.Forms.Panel();
             this.pLogin = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
