@@ -14,12 +14,9 @@ namespace SapatariaProject.UI
     public partial class frmTelaInicial : Form
     {
         //Atributos
-        private static VendedoresDTO vendedor;
-        private static Boolean adm = false;
+        public VendedoresDTO vendedor;
+        private Boolean adm = false;
         public static frmLogin frmL;
-        //Getters e Setters
-        internal static VendedoresDTO Vendedor { get => vendedor; set => vendedor = value; }
-        public static bool Adm { get => adm; set => adm = value; }
         //Construtor
         public frmTelaInicial()
         {
@@ -29,14 +26,20 @@ namespace SapatariaProject.UI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            frmL = new frmLogin();
+            frmL = new frmLogin(this);
             frmL.ShowDialog();
         }
 
         private void btnLogin_Load(object sender, EventArgs e)
         {
-            frmL = new frmLogin();
+            frmL = new frmLogin(this);
             frmL.ShowDialog();
+        }
+
+        public void ConfirmaConta()
+        {
+            pPrincipal.Visible = true;
+            this.Visible = true;
         }
     }
 }

@@ -17,14 +17,33 @@ namespace SapatariaProject.UI
         //Atributos
         VendedoresDTO vendDto = new VendedoresDTO();
         VendedoresBLL vendBll = new VendedoresBLL();
+        frmTelaInicial frmT = new frmTelaInicial();
         //Construtor
-        public frmLogin()
+        public frmLogin(frmTelaInicial frmT)
         {
+            this.frmT = frmT;
             InitializeComponent();
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            VendedoresDTO vendedor = null;
+            //Método que verifica se existe uma conta com esse login e senha
+            if(vendedor != null)
+            {
+                frmT.vendedor = vendedor;
+                frmT.ConfirmaConta();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Login ou Senha incorretos", "Conta inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.EncerraAplicacao();
         }
     }
 }

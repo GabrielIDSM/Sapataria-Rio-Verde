@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SapatariaProject.DTO
 {
-    class VendedoresDTO
+    public class VendedoresDTO
     {
         String login;
         String senha;

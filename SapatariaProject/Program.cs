@@ -18,7 +18,14 @@ namespace SapatariaProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTelaInicial());
+            frmTelaInicial frmT = new frmTelaInicial();
+            frmT.Visible = false;
+            Application.Run(frmT);
+        }
+
+        public static void EncerraAplicacao()
+        {
+            Application.Exit();
         }
     }
 }
