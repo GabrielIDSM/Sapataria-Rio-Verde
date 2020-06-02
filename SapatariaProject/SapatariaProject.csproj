@@ -48,17 +48,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ClienteBLL.cs" />
+    <Compile Include="BLL\VendedoresBLL.cs" />
     <Compile Include="DAL\ConnectionFactory.cs" />
     <Compile Include="DTO\ClienteDTO.cs" />
-    <Compile Include="frmCadastroClientes.cs">
+    <Compile Include="DTO\VendedoresDTO.cs" />
+    <Compile Include="UI\frmCadastroClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroClientes.Designer.cs">
+    <Compile Include="UI\frmCadastroClientes.Designer.cs">
       <DependentUpon>frmCadastroClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmCadastroClientes.resx">
+    <Compile Include="UI\frmCadastroVendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmCadastroVendedores.Designer.cs">
+      <DependentUpon>frmCadastroVendedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\frmCadastroClientes.resx">
       <DependentUpon>frmCadastroClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -70,6 +84,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\frmCadastroVendedores.resx">
+      <DependentUpon>frmCadastroVendedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -8,9 +8,11 @@ C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\bin\Debug\Ubiety.Dns
 C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\bin\Debug\Renci.SshNet.dll
 C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\bin\Debug\MySql.Data.xml
 C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.csprojAssemblyReference.cache
-C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.frmCadastroClientes.resources
 C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.Properties.Resources.resources
 C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.csproj.GenerateResource.cache
 C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.csproj.CopyComplete
 C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.exe
 C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.pdb
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmCadastroClientes.resources
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmCadastroVendedores.resources
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmPrincipal.resources

@@ -6,3 +6,9 @@ create table Clientes(
     Pedidos int not null,
     Telefone varchar(20) not null
 );
+create table Vendedores(
+	Login varchar(40) primary key,
+    Senha varchar(15) not null,
+    Vendas int not null
+);
+    

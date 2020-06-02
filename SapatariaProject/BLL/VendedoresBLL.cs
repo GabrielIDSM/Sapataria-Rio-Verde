@@ -4,32 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using SapatariaProject.DTO;
 using SapatariaProject.DAL;
+using SapatariaProject.DTO;
+
 
 namespace SapatariaProject.BLL
 {
-    class ClienteBLL
+    class VendedoresBLL
     {
         ConnectionFactory cF;
-        public void Insert(ClienteDTO cliente)
+        public void Insert(VendedoresDTO vendedores)
         {
             try
             {
                 cF = new ConnectionFactory();
                 cF.CreateConnection();
-                String comando = "Insert INTO Clientes (Nome, Pedidos, Telefone) Values ('" + cliente.Nome + "', 0, '" + cliente.Telefone + "')";
+                String comando = "Insert INTO Vendedores (Login, Senha, Vendas) Values ('"+ vendedores.Login +"', '"+ vendedores.Senha +"' , 0)";
                 cF.SqlCommand(comando);
-            } 
+            }
             catch (Exception e)
             {
                 throw new Exception("Erro: " + e.Message);
-            } 
+            }
             finally
             {
                 cF = null;
             }
-            
+
         }
 
         public DataTable Read()
@@ -39,7 +40,7 @@ namespace SapatariaProject.BLL
             {
                 cF = new ConnectionFactory();
                 cF.CreateConnection();
-                dT = cF.RetDataTable("Select * from Clientes");
+                dT = cF.RetDataTable("Select * from Vendedores");
             }
             catch (Exception e)
             {

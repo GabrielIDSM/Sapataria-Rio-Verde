@@ -10,26 +10,24 @@ using System.Windows.Forms;
 using SapatariaProject.DTO;
 using SapatariaProject.BLL;
 
-namespace SapatariaProject
+namespace SapatariaProject.UI
 {
-    public partial class frmCadastroClientes : Form
+    public partial class frmCadastroVendedores : Form
     {
         //Atributos
-        ClienteBLL clienteBll = new ClienteBLL();
-        ClienteDTO clienteDto = new ClienteDTO();
-        //Getters e Setters
+        VendedoresBLL vendedoresBll = new VendedoresBLL();
+        VendedoresDTO vendedoresDto = new VendedoresDTO();
         //Construtor
-        public frmCadastroClientes()
+        public frmCadastroVendedores()
         {
             InitializeComponent();
-            txtbxID.Enabled = false;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            clienteDto.Nome = txtbxNome.Text;
-            clienteDto.Telefone = txtbxTelefone.Text;
-            clienteBll.Inserir(clienteDto);
+            vendedoresDto.Login = txtbxLogin.Text;
+            vendedoresDto.Senha = txtbxSenha.Text;
+            vendedoresBll.Insert(vendedoresDto);
         }
     }
 }

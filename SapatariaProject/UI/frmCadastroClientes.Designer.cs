@@ -1,4 +1,4 @@
-﻿namespace SapatariaProject
+﻿namespace SapatariaProject.UI
 {
     partial class frmCadastroClientes
     {
@@ -70,7 +70,7 @@
             // txtbxID
             // 
             this.txtbxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxID.Location = new System.Drawing.Point(133, 9);
+            this.txtbxID.Location = new System.Drawing.Point(138, 9);
             this.txtbxID.Name = "txtbxID";
             this.txtbxID.Size = new System.Drawing.Size(254, 29);
             this.txtbxID.TabIndex = 3;
@@ -78,7 +78,8 @@
             // txtbxNome
             // 
             this.txtbxNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxNome.Location = new System.Drawing.Point(133, 44);
+            this.txtbxNome.Location = new System.Drawing.Point(138, 44);
+            this.txtbxNome.MaxLength = 40;
             this.txtbxNome.Name = "txtbxNome";
             this.txtbxNome.Size = new System.Drawing.Size(254, 29);
             this.txtbxNome.TabIndex = 4;
@@ -86,7 +87,8 @@
             // txtbxTelefone
             // 
             this.txtbxTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxTelefone.Location = new System.Drawing.Point(133, 79);
+            this.txtbxTelefone.Location = new System.Drawing.Point(138, 79);
+            this.txtbxTelefone.MaxLength = 20;
             this.txtbxTelefone.Name = "txtbxTelefone";
             this.txtbxTelefone.Size = new System.Drawing.Size(254, 29);
             this.txtbxTelefone.TabIndex = 5;
@@ -95,7 +97,7 @@
             // 
             this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(282, 114);
+            this.btnCadastrar.Location = new System.Drawing.Point(287, 114);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(105, 31);
             this.btnCadastrar.TabIndex = 6;
@@ -107,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 165);
+            this.ClientSize = new System.Drawing.Size(404, 161);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtbxTelefone);
             this.Controls.Add(this.txtbxNome);
@@ -116,7 +118,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmCadastroClientes";
-            this.Text = "Cadastro";
+            this.Text = "Cadastro de Clientes";
             this.ResumeLayout(false);
             this.PerformLayout();
 
