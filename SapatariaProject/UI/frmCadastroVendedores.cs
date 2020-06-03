@@ -27,7 +27,7 @@ namespace SapatariaProject.UI
         {
             vendedoresDto.Login = txtbxLogin.Text;
             vendedoresDto.Senha = txtbxSenha.Text;
-            vendedoresBll.Insert(vendedoresDto);
+            vendedoresBll.NovoVendedor(vendedoresDto);
         }
     }
 }

@@ -15,6 +15,7 @@ namespace SapatariaProject.UI
     public partial class frmLogin : Form
     {
         //Atributos
+        VendedoresDTO vendedor = null; 
         VendedoresDTO vendDto = new VendedoresDTO();
         VendedoresBLL vendBll = new VendedoresBLL();
         frmTelaInicial frmT = new frmTelaInicial();
@@ -29,11 +30,13 @@ namespace SapatariaProject.UI
         {
             VendedoresDTO vendedor = null;
             //Método que verifica se existe uma conta com esse login e senha
+            vendedor = vendBll.EhVendedor(txtbxLogin.Text, txtbxSenha.Text);
             if(vendedor != null)
             {
                 frmT.vendedor = vendedor;
+                this.vendedor = vendedor;
                 frmT.ConfirmaConta();
-                this.Close();
+                this.Dispose();
             }
             else
             {
@@ -43,7 +46,7 @@ namespace SapatariaProject.UI
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Program.EncerraAplicacao();
+            if(this.vendedor == null) Program.EncerraAplicacao();
         }
     }
 }

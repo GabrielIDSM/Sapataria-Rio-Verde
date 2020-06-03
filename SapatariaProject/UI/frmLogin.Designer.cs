@@ -129,6 +129,7 @@
             this.txtbxSenha.Name = "txtbxSenha";
             this.txtbxSenha.Size = new System.Drawing.Size(276, 31);
             this.txtbxSenha.TabIndex = 7;
+            this.txtbxSenha.UseSystemPasswordChar = true;
             // 
             // txtbxLogin
             // 

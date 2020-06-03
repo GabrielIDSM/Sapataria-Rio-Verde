@@ -29,7 +29,7 @@ namespace SapatariaProject.UI
         {
             clienteDto.Nome = txtbxNome.Text;
             clienteDto.Telefone = txtbxTelefone.Text;
-            clienteBll.Insert(clienteDto);
+            clienteBll.NovoCliente(clienteDto);
         }
     }
 }
