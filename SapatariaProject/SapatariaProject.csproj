@@ -52,6 +52,18 @@
     <Compile Include="DAL\ConnectionFactory.cs" />
     <Compile Include="DTO\ClienteDTO.cs" />
     <Compile Include="DTO\VendedoresDTO.cs" />
+    <Compile Include="UI\frmAttCadastroClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAttCadastroClientes.Designer.cs">
+      <DependentUpon>frmAttCadastroClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmAttCadastroVendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAttCadastroVendedores.Designer.cs">
+      <DependentUpon>frmAttCadastroVendedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmCadastroClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,12 @@
     <Compile Include="UI\frmTelaInicial.Designer.cs">
       <DependentUpon>frmTelaInicial.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\frmAttCadastroClientes.resx">
+      <DependentUpon>frmAttCadastroClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAttCadastroVendedores.resx">
+      <DependentUpon>frmAttCadastroVendedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmCadastroClientes.resx">
       <DependentUpon>frmCadastroClientes.cs</DependentUpon>
     </EmbeddedResource>

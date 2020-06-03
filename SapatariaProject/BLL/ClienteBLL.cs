@@ -103,7 +103,7 @@ namespace SapatariaProject.BLL
             {
                 cF = new ConnectionFactory();
                 cF.CreateConnection();
-                dR = cF.RetDataReader("Select * from Vendedores");
+                dR = cF.RetDataReader("Select * from Clientes");
             }
             catch (Exception e)
             {
@@ -154,6 +154,34 @@ namespace SapatariaProject.BLL
             {
                 Console.WriteLine(e.Message);
                 return false;
+            }
+        }
+
+        public bool AttCliente(ClienteDTO cliente)
+        {
+            try
+            {
+                cliente.Nome = cliente.Nome.Replace("'", "''");
+                cliente.Telefone = cliente.Telefone.Replace("'", "''");
+                Update(cliente);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+
+        public int ProximoID()
+        {
+            try
+            {
+                List<ClienteDTO> clientes = Read();
+                return clientes.Count + 1;
+            } catch(Exception e)
+            {
+                return -1;
             }
         }
     }

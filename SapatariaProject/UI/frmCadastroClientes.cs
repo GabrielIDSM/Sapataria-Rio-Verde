@@ -23,13 +23,16 @@ namespace SapatariaProject.UI
         {
             InitializeComponent();
             txtbxID.Enabled = false;
+            txtbxID.Text = Convert.ToString(clienteBll.ProximoID());
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             clienteDto.Nome = txtbxNome.Text;
             clienteDto.Telefone = txtbxTelefone.Text;
-            clienteBll.NovoCliente(clienteDto);
+            bool foiPossivel = clienteBll.NovoCliente(clienteDto);
+            if(foiPossivel) MessageBox.Show("Foi possível cadastrar o cliente", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
     }
 }

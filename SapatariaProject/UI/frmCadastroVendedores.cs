@@ -27,7 +27,16 @@ namespace SapatariaProject.UI
         {
             vendedoresDto.Login = txtbxLogin.Text;
             vendedoresDto.Senha = txtbxSenha.Text;
-            vendedoresBll.NovoVendedor(vendedoresDto);
+            bool foiPossivel = vendedoresBll.NovoVendedor(vendedoresDto);
+            if (foiPossivel)
+            {
+                MessageBox.Show("Foi possível cadastrar o vendedor", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível cadastrar o vendedor", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

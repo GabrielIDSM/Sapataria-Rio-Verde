@@ -17,3 +17,5 @@ C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaP
 C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmCadastroVendedores.resources
 C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmTelaInicial.resources
 C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmLogin.resources
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmAttCadastroClientes.resources
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmAttCadastroVendedores.resources

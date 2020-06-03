@@ -163,9 +163,32 @@ namespace SapatariaProject.BLL
             try
             {
                 vendedor.Login = vendedor.Login.Replace("'", "''");
-                Insert(vendedor);
+                //Verifica validade
+                bool validade = true;
+                List<VendedoresDTO> vendedores = Read();
+                if(vendedores != null) foreach(VendedoresDTO v in vendedores)
+                    {
+                        if (v.Login.Equals(vendedor.Login)) validade = false;
+                    }
+                if (validade) Insert(vendedor);
+                else return false;
                 return true;
             }catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+
+        public bool AttVendedor(VendedoresDTO vendedor)
+        {
+            try
+            {
+                vendedor.Senha = vendedor.Senha.Replace("'", "''");
+                Update(vendedor);
+                return true;
+            }
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
                 return false;

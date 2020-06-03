@@ -20,7 +20,6 @@ namespace SapatariaProject.UI
         public frmTelaInicial()
         {
             InitializeComponent();
-            pPrincipal.Visible = false;
         }
 
         private void btnLogin_Load(object sender, EventArgs e)
@@ -31,7 +30,6 @@ namespace SapatariaProject.UI
 
         public void ConfirmaConta()
         {
-            pPrincipal.Visible = true;
             this.Visible = true;
         }
 
@@ -41,10 +39,34 @@ namespace SapatariaProject.UI
             if (r.Equals(DialogResult.Yes))
             {
                 vendedor = null;
-                pPrincipal.Visible = false;
+                this.Visible = false;
                 frmL = new frmLogin(this);
                 frmL.ShowDialog();
             }
+        }
+
+        private void btnNovoFuncionario_Click(object sender, EventArgs e)
+        {
+            frmCadastroVendedores frm = new frmCadastroVendedores();
+            frm.ShowDialog();
+        }
+
+        private void btnCadastrarCliente_Click(object sender, EventArgs e)
+        {
+            frmCadastroClientes frm = new frmCadastroClientes();
+            frm.ShowDialog();
+        }
+
+        private void btnAttClientes_Click(object sender, EventArgs e)
+        {
+            frmAttCadastroClientes frm = new frmAttCadastroClientes();
+            frm.ShowDialog();
+        }
+
+        private void btnAttVendedores_Click(object sender, EventArgs e)
+        {
+            frmAttCadastroVendedores frm = new frmAttCadastroVendedores();
+            frm.ShowDialog();
         }
     }
 }

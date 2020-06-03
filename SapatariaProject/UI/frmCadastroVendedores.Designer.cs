@@ -52,6 +52,7 @@
             this.txtbxSenha.Name = "txtbxSenha";
             this.txtbxSenha.Size = new System.Drawing.Size(254, 29);
             this.txtbxSenha.TabIndex = 6;
+            this.txtbxSenha.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -95,6 +96,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtbxSenha);
             this.Controls.Add(this.txtbxLogin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmCadastroVendedores";
             this.Text = "Cadastro de Vendedores";
             this.ResumeLayout(false);
