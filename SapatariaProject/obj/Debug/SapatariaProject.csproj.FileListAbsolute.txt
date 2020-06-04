@@ -19,3 +19,9 @@ C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaP
 C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmLogin.resources
 C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmAttCadastroClientes.resources
 C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmAttCadastroVendedores.resources
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmConcederStatus.resources
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmExcCadastroClientes.resources
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmExcCadastroVendedores.resources
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmEstoque.resources
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmLogVendas.resources
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmCadastroProdutos.resources

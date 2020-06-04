@@ -72,6 +72,7 @@
             this.txtbxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxID.Location = new System.Drawing.Point(138, 9);
             this.txtbxID.Name = "txtbxID";
+            this.txtbxID.ReadOnly = true;
             this.txtbxID.Size = new System.Drawing.Size(254, 29);
             this.txtbxID.TabIndex = 3;
             // 

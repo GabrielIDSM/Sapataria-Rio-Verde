@@ -16,13 +16,12 @@ namespace SapatariaProject.UI
     public partial class frmCadastroClientes : Form
     {
         //Atributos
-        ClienteBLL clienteBll = new ClienteBLL();
-        ClienteDTO clienteDto = new ClienteDTO();
+        ClientesBLL clienteBll = new ClientesBLL();
+        ClientesDTO clienteDto = new ClientesDTO();
         //Construtor
         public frmCadastroClientes()
         {
             InitializeComponent();
-            txtbxID.Enabled = false;
             txtbxID.Text = Convert.ToString(clienteBll.ProximoID());
         }
 

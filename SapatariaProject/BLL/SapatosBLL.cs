@@ -10,39 +10,19 @@ using MySql.Data.MySqlClient;
 
 namespace SapatariaProject.BLL
 {
-    class ClienteBLL
+    class SapatosBLL
     {
         //Atributos
         ConnectionFactory cF;
 
         //CRUD
-        private void Insert(ClienteDTO cliente)
+        private void Insert(SapatosDTO sapatos)
         {
             try
             {
                 cF = new ConnectionFactory();
                 cF.CreateConnection();
-                String comando = "Insert INTO Clientes (Nome, Pedidos, Telefone) Values ('" + cliente.Nome + "', 0, '" + cliente.Telefone + "')";
-                cF.SqlCommand(comando);
-            } 
-            catch (Exception e)
-            {
-                throw new Exception("Erro: " + e.Message);
-            } 
-            finally
-            {
-                cF = null;
-            }
-            
-        }
-
-        private void Delete(ClienteDTO cliente)
-        {
-            try
-            {
-                cF = new ConnectionFactory();
-                cF.CreateConnection();
-                String comando = "Delete from Clientes Where ID = " + cliente.Id + "";
+                String comando = "Insert INTO Sapatos (Nome, Tamanho, Quantidade, Sexo, Valor) Values ('" + sapatos.Nome + "', " + sapatos.Tamanho + ", " + sapatos.Quantidade + ", '" + sapatos.Sexo + "', " + sapatos.Valor + ")";
                 cF.SqlCommand(comando);
             }
             catch (Exception e)
@@ -56,13 +36,33 @@ namespace SapatariaProject.BLL
 
         }
 
-        private void Update(ClienteDTO cliente)
+        private void Delete(SapatosDTO sapatos)
         {
             try
             {
                 cF = new ConnectionFactory();
                 cF.CreateConnection();
-                String comando = "Update Clientes set Nome = '" + cliente.Nome + "', Pedidos = " + cliente.Compras + ", Telefone = '" + cliente.Telefone + "' where ID = " + cliente.Id;
+                String comando = "Delete from Sapatos Where ID = " + sapatos.Id + "";
+                cF.SqlCommand(comando);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Erro: " + e.Message);
+            }
+            finally
+            {
+                cF = null;
+            }
+
+        }
+
+        private void Update(SapatosDTO sapatos)
+        {
+            try
+            {
+                cF = new ConnectionFactory();
+                cF.CreateConnection();
+                String comando = "Update Sapatos set Nome = '" + sapatos.Nome + "', Tamanho = " + sapatos.Tamanho + ", Quantidade = '" + sapatos.Quantidade + "', Sexo = '" + sapatos.Sexo + "', Valor = " + sapatos.Valor + " where ID = " + sapatos.Id;
                 cF.SqlCommand(comando);
             }
             catch (Exception e)
@@ -83,7 +83,7 @@ namespace SapatariaProject.BLL
             {
                 cF = new ConnectionFactory();
                 cF.CreateConnection();
-                dT = cF.RetDataTable("Select * from Clientes");
+                dT = cF.RetDataTable("Select * from Sapatos");
             }
             catch (Exception e)
             {
@@ -103,7 +103,7 @@ namespace SapatariaProject.BLL
             {
                 cF = new ConnectionFactory();
                 cF.CreateConnection();
-                dR = cF.RetDataReader("Select * from Clientes");
+                dR = cF.RetDataReader("Select * from Sapatos");
             }
             catch (Exception e)
             {
@@ -116,23 +116,25 @@ namespace SapatariaProject.BLL
             return dR;
         }
 
-        public List<ClienteDTO> Read()
+        public List<SapatosDTO> Read()
         {
             MySqlDataReader dR = ReadDr();
-            List<ClienteDTO> clientes = new List<ClienteDTO>();
+            List<SapatosDTO> sapatos = new List<SapatosDTO>();
             try
             {
                 if (dR != null) do
                     {
-                        ClienteDTO cliente = new ClienteDTO();
-                        cliente.Id = Convert.ToInt32(dR["ID"].ToString());
-                        cliente.Nome = dR["Nome"].ToString();
-                        cliente.Compras = Convert.ToInt32(dR["Pedidos"].ToString());
-                        cliente.Telefone = dR["Telefone"].ToString();
-                        clientes.Add(cliente);
+                        SapatosDTO sapato = new SapatosDTO();
+                        sapato.Id = Convert.ToInt32(dR["ID"].ToString());
+                        sapato.Nome = dR["Nome"].ToString();
+                        sapato.Tamanho = Convert.ToInt32(dR["Tamanho"].ToString());
+                        sapato.Quantidade = Convert.ToInt32(dR["Quantidade"].ToString());
+                        sapato.Sexo = dR["Sexo"].ToString();
+                        sapato.Valor = float.Parse(dR["Valor"].ToString());
+                        sapatos.Add(sapato);
                     } while (dR.Read());
-                if (clientes.Count == 0) return null;
-                return clientes;
+                if (sapatos.Count == 0) return null;
+                return sapatos;
             }
             catch (Exception e)
             {
@@ -140,48 +142,14 @@ namespace SapatariaProject.BLL
             }
         }
 
-        //Demais métodos
-        public bool NovoCliente(ClienteDTO cliente)
+        public bool NovoProduto(SapatosDTO sapato)
         {
             try
             {
-                cliente.Nome = cliente.Nome.Replace("'", "''");
-                cliente.Telefone = cliente.Telefone.Replace("'", "''");
-                Insert(cliente);
                 return true;
-            }
-            catch (Exception e)
+            }catch(Exception e)
             {
-                Console.WriteLine(e.Message);
                 return false;
-            }
-        }
-
-        public bool AttCliente(ClienteDTO cliente)
-        {
-            try
-            {
-                cliente.Nome = cliente.Nome.Replace("'", "''");
-                cliente.Telefone = cliente.Telefone.Replace("'", "''");
-                Update(cliente);
-                return true;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return false;
-            }
-        }
-
-        public int ProximoID()
-        {
-            try
-            {
-                List<ClienteDTO> clientes = Read();
-                return clientes.Count + 1;
-            } catch(Exception e)
-            {
-                return -1;
             }
         }
     }

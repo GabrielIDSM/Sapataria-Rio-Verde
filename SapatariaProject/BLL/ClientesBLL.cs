@@ -4,25 +4,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using SapatariaProject.DAL;
 using SapatariaProject.DTO;
+using SapatariaProject.DAL;
 using MySql.Data.MySqlClient;
-
 
 namespace SapatariaProject.BLL
 {
-    class VendedoresBLL
+    class ClientesBLL
     {
         //Atributos
         ConnectionFactory cF;
+
         //CRUD
-        private void Insert(VendedoresDTO vendedores)
+        private void Insert(ClientesDTO cliente)
         {
             try
             {
                 cF = new ConnectionFactory();
                 cF.CreateConnection();
-                String comando = "Insert INTO Vendedores (Login, Senha, Vendas) Values ('"+ vendedores.Login +"', '"+ vendedores.Senha +"' , 0)";
+                String comando = "Insert INTO Clientes (Nome, Pedidos, Telefone) Values ('" + cliente.Nome + "', 0, '" + cliente.Telefone + "')";
+                cF.SqlCommand(comando);
+            } 
+            catch (Exception e)
+            {
+                throw new Exception("Erro: " + e.Message);
+            } 
+            finally
+            {
+                cF = null;
+            }
+            
+        }
+
+        private void Delete(ClientesDTO cliente)
+        {
+            try
+            {
+                cF = new ConnectionFactory();
+                cF.CreateConnection();
+                String comando = "Delete from Clientes Where ID = " + cliente.Id + "";
                 cF.SqlCommand(comando);
             }
             catch (Exception e)
@@ -36,35 +56,13 @@ namespace SapatariaProject.BLL
 
         }
 
-        private void Delete(VendedoresDTO vendedores)
+        private void Update(ClientesDTO cliente)
         {
             try
-
             {
                 cF = new ConnectionFactory();
                 cF.CreateConnection();
-                String comando = "Delete from Vendedores Where Login = '" + vendedores.Login + "'";
-                cF.SqlCommand(comando);
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Erro: " + e.Message);
-            }
-            finally
-            {
-                cF = null;
-            }
-
-        }
-
-        private void Update(VendedoresDTO vendedores)
-        {
-            try
-
-            {
-                cF = new ConnectionFactory();
-                cF.CreateConnection();
-                String comando = "Update Vendedores set Senha = '" + vendedores.Senha + "', Vendas = " + vendedores.Vendas + " Where Login = '" + vendedores.Login + "'";
+                String comando = "Update Clientes set Nome = '" + cliente.Nome + "', Pedidos = " + cliente.Compras + ", Telefone = '" + cliente.Telefone + "' where ID = " + cliente.Id;
                 cF.SqlCommand(comando);
             }
             catch (Exception e)
@@ -85,7 +83,7 @@ namespace SapatariaProject.BLL
             {
                 cF = new ConnectionFactory();
                 cF.CreateConnection();
-                dT = cF.RetDataTable("Select * from Vendedores");
+                dT = cF.RetDataTable("Select * from Clientes");
             }
             catch (Exception e)
             {
@@ -105,7 +103,7 @@ namespace SapatariaProject.BLL
             {
                 cF = new ConnectionFactory();
                 cF.CreateConnection();
-                dR = cF.RetDataReader("Select * from Vendedores");
+                dR = cF.RetDataReader("Select * from Clientes");
             }
             catch (Exception e)
             {
@@ -118,74 +116,38 @@ namespace SapatariaProject.BLL
             return dR;
         }
 
-        public List<VendedoresDTO> Read()
+        public List<ClientesDTO> Read()
         {
             MySqlDataReader dR = ReadDr();
-            List<VendedoresDTO> vendedores = new List<VendedoresDTO>();
+            List<ClientesDTO> clientes = new List<ClientesDTO>();
             try
             {
-                if(dR != null) do
-                {
-                    VendedoresDTO vendedor = new VendedoresDTO();
-                    vendedor.Login = dR["Login"].ToString();
-                    vendedor.Senha = dR["Senha"].ToString();
-                    vendedor.Vendas = Convert.ToInt32(dR["Vendas"].ToString());
-                    vendedores.Add(vendedor);
-                } while (dR.Read());
-                if (vendedores.Count == 0) return null;
-                return vendedores;
-            }catch(Exception e) 
-            { 
+                if (dR != null) do
+                    {
+                        ClientesDTO cliente = new ClientesDTO();
+                        cliente.Id = Convert.ToInt32(dR["ID"].ToString());
+                        cliente.Nome = dR["Nome"].ToString();
+                        cliente.Compras = Convert.ToInt32(dR["Pedidos"].ToString());
+                        cliente.Telefone = dR["Telefone"].ToString();
+                        clientes.Add(cliente);
+                    } while (dR.Read());
+                if (clientes.Count == 0) return null;
+                return clientes;
+            }
+            catch (Exception e)
+            {
                 throw new Exception("Erro: " + e.Message);
             }
         }
 
         //Demais métodos
-        public VendedoresDTO EhVendedor(String login, String senha)
+        public bool NovoCliente(ClientesDTO cliente)
         {
             try
             {
-                List<VendedoresDTO> vendedores = Read();
-                foreach (VendedoresDTO v in vendedores)
-                {
-                    if (login.Equals(v.Login) && senha.Equals(v.Senha)) return v;
-                }
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Erro: " + e.Message);
-            }
-            return null;
-        }
-
-        public bool NovoVendedor(VendedoresDTO vendedor)
-        {
-            try
-            {
-                vendedor.Login = vendedor.Login.Replace("'", "''");
-                //Verifica validade
-                bool validade = true;
-                List<VendedoresDTO> vendedores = Read();
-                if(vendedores != null) foreach(VendedoresDTO v in vendedores)
-                    {
-                        if (v.Login.Equals(vendedor.Login)) validade = false;
-                    }
-                if (validade) Insert(vendedor);
-                else return false;
-                return true;
-            }catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return false;
-            }
-        }
-
-        public bool AttVendedor(VendedoresDTO vendedor)
-        {
-            try
-            {
-                vendedor.Senha = vendedor.Senha.Replace("'", "''");
-                Update(vendedor);
+                cliente.Nome = cliente.Nome.Replace("'", "''");
+                cliente.Telefone = cliente.Telefone.Replace("'", "''");
+                Insert(cliente);
                 return true;
             }
             catch (Exception e)
@@ -195,17 +157,44 @@ namespace SapatariaProject.BLL
             }
         }
 
-        public bool ExcluirVendedor(VendedoresDTO vendedor)
+        public bool AttCliente(ClientesDTO cliente)
         {
             try
             {
-                Delete(vendedor);
+                cliente.Nome = cliente.Nome.Replace("'", "''");
+                cliente.Telefone = cliente.Telefone.Replace("'", "''");
+                Update(cliente);
                 return true;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
                 return false;
+            }
+        }
+
+        public bool ExcluirCliente(ClientesDTO cliente)
+        {
+            try
+            {
+                Delete(cliente);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+        public int ProximoID()
+        {
+            try
+            {
+                List<ClientesDTO> clientes = Read();
+                return clientes.Count + 1;
+            } catch(Exception e)
+            {
+                return -1;
             }
         }
     }

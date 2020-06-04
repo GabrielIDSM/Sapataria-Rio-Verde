@@ -18,6 +18,7 @@ namespace SapatariaProject.UI
         VendedoresDTO vendedor = null; 
         VendedoresDTO vendDto = new VendedoresDTO();
         VendedoresBLL vendBll = new VendedoresBLL();
+        AdmBLL admBll = new AdmBLL();
         frmTelaInicial frmT = new frmTelaInicial();
         //Construtor
         public frmLogin(frmTelaInicial frmT)
@@ -35,6 +36,7 @@ namespace SapatariaProject.UI
             {
                 frmT.vendedor = vendedor;
                 this.vendedor = vendedor;
+                if (admBll.EhAdm(vendedor.Login)) frmT.ConfirmaAdm();
                 frmT.ConfirmaConta();
                 this.Dispose();
             }

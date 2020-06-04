@@ -16,9 +16,9 @@ namespace SapatariaProject.UI
     public partial class frmAttCadastroClientes : Form
     {
         //Atributos
-        ClienteBLL clienteBll = new ClienteBLL();
-        ClienteDTO clienteDto = new ClienteDTO();
-        List<ClienteDTO> clientes = null;
+        ClientesBLL clienteBll = new ClientesBLL();
+        ClientesDTO clienteDto = new ClientesDTO();
+        List<ClientesDTO> clientes = null;
         //Construtor
         public frmAttCadastroClientes()
         {
@@ -32,7 +32,7 @@ namespace SapatariaProject.UI
             txtbxNome.Enabled = false;
             txtbxTelefone.Enabled = false;
             this.clientes = this.clienteBll.Read();
-            if(this.clientes != null) foreach(ClienteDTO c in this.clientes)
+            if(this.clientes != null) foreach(ClientesDTO c in this.clientes)
                 {
                     cbxID.Items.Add(c.Id);
                 }
@@ -69,7 +69,7 @@ namespace SapatariaProject.UI
             {
                 this.clientes = clienteBll.Read();
                 cbxID.Items.Clear();
-                if (this.clientes != null) foreach (ClienteDTO c in this.clientes)
+                if (this.clientes != null) foreach (ClientesDTO c in this.clientes)
                     {
                         cbxID.Items.Add(c.Id);
                     }

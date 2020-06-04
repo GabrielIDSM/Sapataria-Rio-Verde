@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SapatariaProject.DTO
 {
-    class ClienteDTO
+    class ClientesDTO
     {
         int id;
         String nome;

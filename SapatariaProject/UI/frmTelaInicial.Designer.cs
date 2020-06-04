@@ -31,19 +31,31 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTelaInicial));
             this.btnLogout = new System.Windows.Forms.Button();
             this.pEstoque = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnAttProdutos = new System.Windows.Forms.Button();
+            this.btnCadProdutos = new System.Windows.Forms.Button();
+            this.btnReporEstoque = new System.Windows.Forms.Button();
+            this.btnEstoque = new System.Windows.Forms.Button();
             this.pTEstoque = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pCompras = new System.Windows.Forms.Panel();
+            this.btnVendas = new System.Windows.Forms.Button();
+            this.btnNovaVenda = new System.Windows.Forms.Button();
             this.pTCompras = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pAdm = new System.Windows.Forms.Panel();
+            this.btnExcCadastroVendedores = new System.Windows.Forms.Button();
+            this.btnExcCadastroClientes = new System.Windows.Forms.Button();
+            this.btnStatus = new System.Windows.Forms.Button();
             this.btnAttClientes = new System.Windows.Forms.Button();
             this.btnAttVendedores = new System.Windows.Forms.Button();
             this.btnCadastrarCliente = new System.Windows.Forms.Button();
             this.btnNovoFuncionario = new System.Windows.Forms.Button();
             this.pTAdm = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.pEstoque.SuspendLayout();
             this.pTEstoque.SuspendLayout();
+            this.pCompras.SuspendLayout();
             this.pTCompras.SuspendLayout();
             this.pAdm.SuspendLayout();
             this.pTAdm.SuspendLayout();
@@ -66,10 +78,72 @@
             // 
             this.pEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
             this.pEstoque.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pEstoque.Controls.Add(this.button1);
+            this.pEstoque.Controls.Add(this.btnAttProdutos);
+            this.pEstoque.Controls.Add(this.btnCadProdutos);
+            this.pEstoque.Controls.Add(this.btnReporEstoque);
+            this.pEstoque.Controls.Add(this.btnEstoque);
             this.pEstoque.Location = new System.Drawing.Point(141, 165);
             this.pEstoque.Name = "pEstoque";
             this.pEstoque.Size = new System.Drawing.Size(300, 400);
             this.pEstoque.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gainsboro;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(3, 167);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(292, 35);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Remover Cadastro de Produtos";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnAttProdutos
+            // 
+            this.btnAttProdutos.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnAttProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAttProdutos.Location = new System.Drawing.Point(3, 126);
+            this.btnAttProdutos.Name = "btnAttProdutos";
+            this.btnAttProdutos.Size = new System.Drawing.Size(292, 35);
+            this.btnAttProdutos.TabIndex = 4;
+            this.btnAttProdutos.Text = "Atualizar Cadastro de Produtos";
+            this.btnAttProdutos.UseVisualStyleBackColor = false;
+            // 
+            // btnCadProdutos
+            // 
+            this.btnCadProdutos.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnCadProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadProdutos.Location = new System.Drawing.Point(3, 85);
+            this.btnCadProdutos.Name = "btnCadProdutos";
+            this.btnCadProdutos.Size = new System.Drawing.Size(292, 35);
+            this.btnCadProdutos.TabIndex = 3;
+            this.btnCadProdutos.Text = "Cadastrar Produto";
+            this.btnCadProdutos.UseVisualStyleBackColor = false;
+            this.btnCadProdutos.Click += new System.EventHandler(this.btnCadProdutos_Click);
+            // 
+            // btnReporEstoque
+            // 
+            this.btnReporEstoque.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnReporEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporEstoque.Location = new System.Drawing.Point(3, 44);
+            this.btnReporEstoque.Name = "btnReporEstoque";
+            this.btnReporEstoque.Size = new System.Drawing.Size(292, 35);
+            this.btnReporEstoque.TabIndex = 2;
+            this.btnReporEstoque.Text = "Atualizar Estoque";
+            this.btnReporEstoque.UseVisualStyleBackColor = false;
+            // 
+            // btnEstoque
+            // 
+            this.btnEstoque.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstoque.Location = new System.Drawing.Point(3, 3);
+            this.btnEstoque.Name = "btnEstoque";
+            this.btnEstoque.Size = new System.Drawing.Size(292, 35);
+            this.btnEstoque.TabIndex = 1;
+            this.btnEstoque.Text = "Estoque";
+            this.btnEstoque.UseVisualStyleBackColor = false;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
             // pTEstoque
             // 
@@ -95,10 +169,36 @@
             // 
             this.pCompras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
             this.pCompras.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pCompras.Controls.Add(this.btnVendas);
+            this.pCompras.Controls.Add(this.btnNovaVenda);
             this.pCompras.Location = new System.Drawing.Point(447, 165);
             this.pCompras.Name = "pCompras";
             this.pCompras.Size = new System.Drawing.Size(300, 400);
             this.pCompras.TabIndex = 3;
+            // 
+            // btnVendas
+            // 
+            this.btnVendas.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnVendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVendas.Location = new System.Drawing.Point(3, 44);
+            this.btnVendas.Name = "btnVendas";
+            this.btnVendas.Size = new System.Drawing.Size(292, 35);
+            this.btnVendas.TabIndex = 3;
+            this.btnVendas.Text = "Histórico de Vendas";
+            this.btnVendas.UseVisualStyleBackColor = false;
+            this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
+            // 
+            // btnNovaVenda
+            // 
+            this.btnNovaVenda.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnNovaVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovaVenda.Location = new System.Drawing.Point(3, 3);
+            this.btnNovaVenda.Name = "btnNovaVenda";
+            this.btnNovaVenda.Size = new System.Drawing.Size(292, 35);
+            this.btnNovaVenda.TabIndex = 2;
+            this.btnNovaVenda.Text = "Nova Venda";
+            this.btnNovaVenda.UseVisualStyleBackColor = false;
+            this.btnNovaVenda.Click += new System.EventHandler(this.btnNovaVenda_Click);
             // 
             // pTCompras
             // 
@@ -116,14 +216,17 @@
             this.label2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 29);
+            this.label2.Size = new System.Drawing.Size(97, 29);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Compras";
+            this.label2.Text = "Vendas";
             // 
             // pAdm
             // 
             this.pAdm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
             this.pAdm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pAdm.Controls.Add(this.btnExcCadastroVendedores);
+            this.pAdm.Controls.Add(this.btnExcCadastroClientes);
+            this.pAdm.Controls.Add(this.btnStatus);
             this.pAdm.Controls.Add(this.btnAttClientes);
             this.pAdm.Controls.Add(this.btnAttVendedores);
             this.pAdm.Controls.Add(this.btnCadastrarCliente);
@@ -132,6 +235,42 @@
             this.pAdm.Name = "pAdm";
             this.pAdm.Size = new System.Drawing.Size(300, 400);
             this.pAdm.TabIndex = 5;
+            // 
+            // btnExcCadastroVendedores
+            // 
+            this.btnExcCadastroVendedores.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnExcCadastroVendedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcCadastroVendedores.Location = new System.Drawing.Point(3, 167);
+            this.btnExcCadastroVendedores.Name = "btnExcCadastroVendedores";
+            this.btnExcCadastroVendedores.Size = new System.Drawing.Size(292, 35);
+            this.btnExcCadastroVendedores.TabIndex = 6;
+            this.btnExcCadastroVendedores.Text = "Remover Cadastro de Vendedores";
+            this.btnExcCadastroVendedores.UseVisualStyleBackColor = false;
+            this.btnExcCadastroVendedores.Click += new System.EventHandler(this.btnExcCadastroVendedores_Click);
+            // 
+            // btnExcCadastroClientes
+            // 
+            this.btnExcCadastroClientes.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnExcCadastroClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcCadastroClientes.Location = new System.Drawing.Point(3, 208);
+            this.btnExcCadastroClientes.Name = "btnExcCadastroClientes";
+            this.btnExcCadastroClientes.Size = new System.Drawing.Size(292, 35);
+            this.btnExcCadastroClientes.TabIndex = 5;
+            this.btnExcCadastroClientes.Text = "Remover Cadastro de Clientes";
+            this.btnExcCadastroClientes.UseVisualStyleBackColor = false;
+            this.btnExcCadastroClientes.Click += new System.EventHandler(this.btnExcCadastroClientes_Click);
+            // 
+            // btnStatus
+            // 
+            this.btnStatus.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatus.Location = new System.Drawing.Point(3, 249);
+            this.btnStatus.Name = "btnStatus";
+            this.btnStatus.Size = new System.Drawing.Size(292, 35);
+            this.btnStatus.TabIndex = 4;
+            this.btnStatus.Text = "Conceder Status de ADM";
+            this.btnStatus.UseVisualStyleBackColor = false;
+            this.btnStatus.Click += new System.EventHandler(this.btnStatus_Click);
             // 
             // btnAttClientes
             // 
@@ -221,8 +360,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sapataria Rio Verde";
             this.Load += new System.EventHandler(this.btnLogin_Load);
+            this.pEstoque.ResumeLayout(false);
             this.pTEstoque.ResumeLayout(false);
             this.pTEstoque.PerformLayout();
+            this.pCompras.ResumeLayout(false);
             this.pTCompras.ResumeLayout(false);
             this.pTCompras.PerformLayout();
             this.pAdm.ResumeLayout(false);
@@ -247,5 +388,15 @@
         private System.Windows.Forms.Button btnCadastrarCliente;
         private System.Windows.Forms.Button btnAttClientes;
         private System.Windows.Forms.Button btnAttVendedores;
+        private System.Windows.Forms.Button btnStatus;
+        private System.Windows.Forms.Button btnExcCadastroVendedores;
+        private System.Windows.Forms.Button btnExcCadastroClientes;
+        private System.Windows.Forms.Button btnEstoque;
+        private System.Windows.Forms.Button btnNovaVenda;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAttProdutos;
+        private System.Windows.Forms.Button btnCadProdutos;
+        private System.Windows.Forms.Button btnReporEstoque;
+        private System.Windows.Forms.Button btnVendas;
     }
 }
