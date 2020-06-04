@@ -19,7 +19,7 @@ create table Sapatos(
     Nome varchar(40) not null,
     Tamanho int not null,
     Quantidade int not null,
-    Sexo varchar(1) not null,
+    Sexo varchar(20) not null,
     Valor float not null
 );
 create table Vendas(
