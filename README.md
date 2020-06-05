@@ -19,7 +19,7 @@ Linha 20 | Defina o valor da variável para o **USER** do **SERVER**
 Linha 21 | Defina o valor da variável para o **PASS** do **USER**
 Linha 22 | Defina o valor da variável para o nome do **DATABASE** ( "Sapataria" caso use **CriacaoDoBD.sql** )
 
-É importante se certificar que você tem acesso e permissão para modificar o banco de dados no servidor.
+É importante certificar que você tem acesso e permissão para modificar o banco de dados no servidor.
 
 ## Colaboradores e contato
 O Projeto é pessoal, feito por Gabriel Inácio ([Github](https://github.com/GabrielIDSM)/[LinkedIn](https://www.linkedin.com/in/gabriel-inacio-uff/)).
