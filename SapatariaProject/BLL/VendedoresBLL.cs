@@ -134,7 +134,7 @@ namespace SapatariaProject.BLL
                 } while (dR.Read());
                 if (vendedores.Count == 0) return null;
                 return vendedores;
-            }catch(Exception e) 
+            }catch
             {
                 return null;
             }

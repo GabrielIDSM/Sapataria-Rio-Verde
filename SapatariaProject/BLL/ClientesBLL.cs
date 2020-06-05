@@ -134,7 +134,7 @@ namespace SapatariaProject.BLL
                 if (clientes.Count == 0) return null;
                 return clientes;
             }
-            catch (Exception e)
+            catch
             {
                 return null;
             }
@@ -192,7 +192,7 @@ namespace SapatariaProject.BLL
             {
                 List<ClientesDTO> clientes = Read();
                 return clientes.Count + 1;
-            } catch(Exception e)
+            } catch
             {
                 return -1;
             }

@@ -131,7 +131,7 @@ namespace SapatariaProject.BLL
                 if (adms.Count == 0) return null;
                 return adms;
             }
-            catch (Exception e)
+            catch
             {
                 return null;
             }
@@ -189,7 +189,7 @@ namespace SapatariaProject.BLL
                 }
                 if (notadms.Count == 0) return null;
                 return notadms;
-            }catch (Exception e)
+            }catch
             {
                 return null;
             }
@@ -201,7 +201,7 @@ namespace SapatariaProject.BLL
             {
                 Insert(adm);
                 return true;
-            }catch (Exception e)
+            }catch
             {
                 return false;
             }

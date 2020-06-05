@@ -136,7 +136,7 @@ namespace SapatariaProject.BLL
                 if (sapatos.Count == 0) return null;
                 return sapatos;
             }
-            catch (Exception e)
+            catch
             {
                 return null;
             }
@@ -156,7 +156,7 @@ namespace SapatariaProject.BLL
                 sapato.Nome = sapato.Nome.Replace("'", "''");
                 Insert(sapato);
                 return true;
-            }catch(Exception e)
+            }catch
             {
                 return false;
             }
@@ -170,7 +170,7 @@ namespace SapatariaProject.BLL
                 Update(sapato);
                 return true;
             }
-            catch (Exception e)
+            catch
             {
                 return false;
             }
@@ -183,7 +183,7 @@ namespace SapatariaProject.BLL
                 Delete(sapato);
                 return true;
             }
-            catch (Exception e)
+            catch
             {
                 return false;
             }
