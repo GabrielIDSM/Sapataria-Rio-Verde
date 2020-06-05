@@ -64,11 +64,23 @@
     <Compile Include="UI\frmAttCadastroClientes.Designer.cs">
       <DependentUpon>frmAttCadastroClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmAttCadastroProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAttCadastroProdutos.Designer.cs">
+      <DependentUpon>frmAttCadastroProdutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmAttCadastroVendedores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\frmAttCadastroVendedores.Designer.cs">
       <DependentUpon>frmAttCadastroVendedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmAttEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmAttEstoque.Designer.cs">
+      <DependentUpon>FrmAttEstoque.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmCadastroClientes.cs">
       <SubType>Form</SubType>
@@ -126,6 +138,12 @@
     <Compile Include="UI\frmLogVendas.Designer.cs">
       <DependentUpon>frmLogVendas.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmNovaVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmNovaVenda.Designer.cs">
+      <DependentUpon>frmNovaVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmTelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,8 +153,14 @@
     <EmbeddedResource Include="UI\frmAttCadastroClientes.resx">
       <DependentUpon>frmAttCadastroClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAttCadastroProdutos.resx">
+      <DependentUpon>frmAttCadastroProdutos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmAttCadastroVendedores.resx">
       <DependentUpon>frmAttCadastroVendedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmAttEstoque.resx">
+      <DependentUpon>FrmAttEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmCadastroClientes.resx">
       <DependentUpon>frmCadastroClientes.cs</DependentUpon>
@@ -173,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmLogVendas.resx">
       <DependentUpon>frmLogVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmNovaVenda.resx">
+      <DependentUpon>frmNovaVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmTelaInicial.resx">
       <DependentUpon>frmTelaInicial.cs</DependentUpon>

@@ -32,6 +32,10 @@ namespace SapatariaProject.UI
             btnStatus.Enabled = false;
             btnExcCadastroClientes.Enabled = false;
             btnExcCadastroVendedores.Enabled = false;
+            btnCadProdutos.Enabled = false;
+            btnAttProdutos.Enabled = false;
+            btnExcProdutos.Enabled = false;
+            btnReporEstoque.Enabled = false;
             frmL = new frmLogin(this);
             frmL.ShowDialog();
         }
@@ -50,6 +54,10 @@ namespace SapatariaProject.UI
             btnStatus.Enabled = true;
             btnExcCadastroClientes.Enabled = true;
             btnExcCadastroVendedores.Enabled = true;
+            btnCadProdutos.Enabled = true;
+            btnAttProdutos.Enabled = true;
+            btnExcProdutos.Enabled = true;
+            btnReporEstoque.Enabled = true;
         }
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -119,7 +127,8 @@ namespace SapatariaProject.UI
 
         private void btnNovaVenda_Click(object sender, EventArgs e)
         {
-
+            frmNovaVenda frm = new frmNovaVenda(this.vendedor);
+            frm.ShowDialog();
         }
 
         private void btnVendas_Click(object sender, EventArgs e)
@@ -131,6 +140,24 @@ namespace SapatariaProject.UI
         private void btnCadProdutos_Click(object sender, EventArgs e)
         {
             frmCadastroProdutos frm = new frmCadastroProdutos();
+            frm.ShowDialog();
+        }
+
+        private void btnAttProdutos_Click(object sender, EventArgs e)
+        {
+            frmAttCadastroProdutos frm = new frmAttCadastroProdutos(0);
+            frm.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmAttCadastroProdutos frm = new frmAttCadastroProdutos(1);
+            frm.ShowDialog();
+        }
+
+        private void btnReporEstoque_Click(object sender, EventArgs e)
+        {
+            FrmAttEstoque frm = new FrmAttEstoque();
             frm.ShowDialog();
         }
     }

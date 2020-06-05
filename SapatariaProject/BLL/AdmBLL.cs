@@ -133,7 +133,7 @@ namespace SapatariaProject.BLL
             }
             catch (Exception e)
             {
-                throw new Exception("Erro: " + e.Message);
+                return null;
             }
         }
 

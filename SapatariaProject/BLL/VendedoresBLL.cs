@@ -135,8 +135,8 @@ namespace SapatariaProject.BLL
                 if (vendedores.Count == 0) return null;
                 return vendedores;
             }catch(Exception e) 
-            { 
-                throw new Exception("Erro: " + e.Message);
+            {
+                return null;
             }
         }
 
@@ -205,6 +205,20 @@ namespace SapatariaProject.BLL
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+
+        public bool AddVenda(VendedoresDTO vendedores)
+        {
+            try
+            {
+                vendedores.Vendas = vendedores.Vendas + 1;
+                Update(vendedores);
+                return true;
+            }
+            catch
+            {
                 return false;
             }
         }

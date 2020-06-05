@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTelaInicial));
             this.btnLogout = new System.Windows.Forms.Button();
             this.pEstoque = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExcProdutos = new System.Windows.Forms.Button();
             this.btnAttProdutos = new System.Windows.Forms.Button();
             this.btnCadProdutos = new System.Windows.Forms.Button();
             this.btnReporEstoque = new System.Windows.Forms.Button();
@@ -78,7 +78,7 @@
             // 
             this.pEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
             this.pEstoque.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pEstoque.Controls.Add(this.button1);
+            this.pEstoque.Controls.Add(this.btnExcProdutos);
             this.pEstoque.Controls.Add(this.btnAttProdutos);
             this.pEstoque.Controls.Add(this.btnCadProdutos);
             this.pEstoque.Controls.Add(this.btnReporEstoque);
@@ -88,16 +88,17 @@
             this.pEstoque.Size = new System.Drawing.Size(300, 400);
             this.pEstoque.TabIndex = 1;
             // 
-            // button1
+            // btnExcProdutos
             // 
-            this.button1.BackColor = System.Drawing.Color.Gainsboro;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 167);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(292, 35);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Remover Cadastro de Produtos";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnExcProdutos.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnExcProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcProdutos.Location = new System.Drawing.Point(3, 167);
+            this.btnExcProdutos.Name = "btnExcProdutos";
+            this.btnExcProdutos.Size = new System.Drawing.Size(292, 35);
+            this.btnExcProdutos.TabIndex = 5;
+            this.btnExcProdutos.Text = "Remover Cadastro de Produtos";
+            this.btnExcProdutos.UseVisualStyleBackColor = false;
+            this.btnExcProdutos.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnAttProdutos
             // 
@@ -109,6 +110,7 @@
             this.btnAttProdutos.TabIndex = 4;
             this.btnAttProdutos.Text = "Atualizar Cadastro de Produtos";
             this.btnAttProdutos.UseVisualStyleBackColor = false;
+            this.btnAttProdutos.Click += new System.EventHandler(this.btnAttProdutos_Click);
             // 
             // btnCadProdutos
             // 
@@ -132,6 +134,7 @@
             this.btnReporEstoque.TabIndex = 2;
             this.btnReporEstoque.Text = "Atualizar Estoque";
             this.btnReporEstoque.UseVisualStyleBackColor = false;
+            this.btnReporEstoque.Click += new System.EventHandler(this.btnReporEstoque_Click);
             // 
             // btnEstoque
             // 
@@ -393,7 +396,7 @@
         private System.Windows.Forms.Button btnExcCadastroClientes;
         private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnNovaVenda;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExcProdutos;
         private System.Windows.Forms.Button btnAttProdutos;
         private System.Windows.Forms.Button btnCadProdutos;
         private System.Windows.Forms.Button btnReporEstoque;

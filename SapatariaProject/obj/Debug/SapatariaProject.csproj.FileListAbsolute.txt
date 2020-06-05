@@ -25,3 +25,6 @@ C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaP
 C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmEstoque.resources
 C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmLogVendas.resources
 C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmCadastroProdutos.resources
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmAttCadastroProdutos.resources
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.FrmAttEstoque.resources
+C:\Users\Gabri\Programas\Git\Rep_Sapataria\SapatariaProject\obj\Debug\SapatariaProject.UI.frmNovaVenda.resources

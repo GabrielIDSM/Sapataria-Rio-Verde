@@ -22,7 +22,7 @@ namespace SapatariaProject.BLL
             {
                 cF = new ConnectionFactory();
                 cF.CreateConnection();
-                String comando = "Insert INTO Sapatos (Nome, Tamanho, Quantidade, Sexo, Valor) Values ('" + sapatos.Nome + "', " + sapatos.Tamanho + ", " + sapatos.Quantidade + ", '" + sapatos.Sexo + "', " + sapatos.Valor + ")";
+                String comando = "Insert INTO Sapatos (Nome, Tamanho, Quantidade, Sexo, Valor) Values ('" + sapatos.Nome + "', " + sapatos.Tamanho + ", " + sapatos.Quantidade + ", '" + sapatos.Sexo + "', " + sapatos.Valor.ToString().Replace(",", ".") + ")";
                 cF.SqlCommand(comando);
             }
             catch (Exception e)
@@ -62,7 +62,7 @@ namespace SapatariaProject.BLL
             {
                 cF = new ConnectionFactory();
                 cF.CreateConnection();
-                String comando = "Update Sapatos set Nome = '" + sapatos.Nome + "', Tamanho = " + sapatos.Tamanho + ", Quantidade = '" + sapatos.Quantidade + "', Sexo = '" + sapatos.Sexo + "', Valor = " + sapatos.Valor + " where ID = " + sapatos.Id;
+                String comando = "Update Sapatos set Nome = '" + sapatos.Nome + "', Tamanho = " + sapatos.Tamanho + ", Quantidade = " + sapatos.Quantidade + ", Sexo = '" + sapatos.Sexo + "', Valor = " + sapatos.Valor.ToString().Replace(",",".") + " Where ID =" + sapatos.Id;
                 cF.SqlCommand(comando);
             }
             catch (Exception e)
@@ -138,16 +138,52 @@ namespace SapatariaProject.BLL
             }
             catch (Exception e)
             {
-                throw new Exception("Erro: " + e.Message);
+                return null;
             }
+        }
+
+        public int ProximoId()
+        {
+            List<SapatosDTO> sapatos = Read();
+            if (sapatos != null) return sapatos.Count + 1;
+            else return 1;
         }
 
         public bool NovoProduto(SapatosDTO sapato)
         {
             try
             {
+                sapato.Nome = sapato.Nome.Replace("'", "''");
+                Insert(sapato);
                 return true;
             }catch(Exception e)
+            {
+                return false;
+            }
+        }
+
+        public bool AttProduto(SapatosDTO sapato)
+        {
+            try
+            {
+                sapato.Nome = sapato.Nome.Replace("'", "''");
+                Update(sapato);
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        public bool ExcProduto(SapatosDTO sapato)
+        {
+            try
+            {
+                Delete(sapato);
+                return true;
+            }
+            catch (Exception e)
             {
                 return false;
             }

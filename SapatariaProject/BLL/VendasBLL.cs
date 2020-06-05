@@ -137,9 +137,27 @@ namespace SapatariaProject.BLL
                 if (vendas.Count == 0) return null;
                 return vendas;
             }
-            catch (Exception e)
+            catch
             {
-                throw new Exception("Erro: " + e.Message);
+                return null;
+            }
+        }
+
+        public bool NovaVenda(VendasDTO venda)
+        {
+            try
+            {
+                //Obter data de Hoje
+                DateTime data = DateTime.Today;
+                venda.Dia = data.Day;
+                venda.Mes = data.Month;
+                venda.Ano = data.Year;
+                Insert(venda);
+                return true;
+            }
+            catch
+            {
+                return false;
             }
         }
     }

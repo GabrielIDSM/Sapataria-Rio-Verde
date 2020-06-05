@@ -24,6 +24,7 @@ namespace SapatariaProject.UI
             InitializeComponent();
             for (int i = 24; i < 45; i++) cbxTamanho.Items.Add(Convert.ToString(i));
             foreach (String m in this.sexoModel) cbxSexo.Items.Add(m);
+            txtbxID.Text = sapatosBll.ProximoId().ToString();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -35,8 +36,13 @@ namespace SapatariaProject.UI
                 sapatosDto.Quantidade = 0;
                 sapatosDto.Tamanho = Convert.ToInt32(cbxTamanho.SelectedItem.ToString());
                 sapatosDto.Sexo = cbxSexo.SelectedItem.ToString();
-                sapatosDto.Valor = float.Parse(txtbxValor.Text);
-            }catch(Exception ex)
+                String valor = txtbxValor.Text;
+                valor = valor.Replace(".", ",");
+                valor = valor.Trim();
+                valor = valor.Normalize();
+                sapatosDto.Valor = (float)Decimal.Parse(valor);
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 validade = false;

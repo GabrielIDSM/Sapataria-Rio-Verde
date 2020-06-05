@@ -136,7 +136,7 @@ namespace SapatariaProject.BLL
             }
             catch (Exception e)
             {
-                throw new Exception("Erro: " + e.Message);
+                return null;
             }
         }
 
@@ -195,6 +195,21 @@ namespace SapatariaProject.BLL
             } catch(Exception e)
             {
                 return -1;
+            }
+        }
+
+        public bool AddCompra(ClientesDTO cliente)
+        {
+            if (cliente == null) return true;
+            try
+            {
+                cliente.Compras = cliente.Compras + 1;
+                Update(cliente);
+                return true;
+            }
+            catch
+            {
+                return false;
             }
         }
     }
