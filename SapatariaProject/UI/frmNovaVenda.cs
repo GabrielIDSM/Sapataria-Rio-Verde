@@ -72,6 +72,7 @@ namespace SapatariaProject.UI
             }
             if (validade)
             {
+                sapatosDTO.Quantidade = sapatosDTO.Quantidade - nDeUnidades;
                 vendasDTO.Valor = Sapatos[dgvEstoque.CurrentCell.RowIndex].Valor * nDeUnidades;
                 txtbxQ.Enabled = false;
                 btnConfirmarQ.Enabled = false;
@@ -115,6 +116,7 @@ namespace SapatariaProject.UI
             validade = vendasBLL.NovaVenda(vendasDTO);
             validade = vendedoresBLL.AddVenda(vendedoresDTO);
             validade = clientesBLL.AddCompra(clientesDTO);
+            validade = sapatosBLL.AttProduto(sapatosDTO);
             if (validade)
             {
                 MessageBox.Show("Foi possível efetuar a compra", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
