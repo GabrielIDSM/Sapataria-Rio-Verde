@@ -7,17 +7,17 @@
 Para executar a aplicação em sua máquina é necessário configurar o servidor e alterar algumas linhas de código.
 
 ### Configurar o Servidor
-Primeiro é criar um banco de dados em um servidor MySQL, Para isso é necessário executar o arquivo CriacaoDoBD.sql no seu servidor MySQL.
+Primeiro é criar um banco de dados em um servidor MySQL, Para isso é necessário executar o arquivo **CriacaoDoBD.sql** no seu servidor MySQL.
 
 ### Modificar o código
-Na classe ConnectionFactory, presente no pacote DAL, modifique as seguintes linhas
+Na classe **ConnectionFactory**, presente no pacote **DAL**, modifique as seguintes linhas
 
 Linha    | Modificação
 ---------|------------
-Linha 19 | Defina o valor da variável para o nome do SERVER
-Linha 20 | Defina o valor da variável para o USER do SERVER
-Linha 21 | Defina o valor da variável para o PASS do USER
-Linha 22 | Defina o valor da variável para o nome do DATABASE ( "Sapataria" caso use CriacaoDoBD.sql )
+Linha 19 | Defina o valor da variável para o nome do **SERVER**
+Linha 20 | Defina o valor da variável para o **USER** do **SERVER**
+Linha 21 | Defina o valor da variável para o **PASS** do **USER**
+Linha 22 | Defina o valor da variável para o nome do **DATABASE** ( "Sapataria" caso use **CriacaoDoBD.sql** )
 
 É importante se certificar que você tem acesso e permissão para modificar o banco de dados no servidor.
 
