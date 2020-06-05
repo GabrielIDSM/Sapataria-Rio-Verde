@@ -25,8 +25,6 @@ Linha 22 | Defina o valor da variável para o nome do **DATABASE** ( "Sapataria"
 Os Sapatos são cadastrados e tem seu estoque administrado pelo sistema. Toda vez que uma venda é feita o estoque é automaticamente atualizado.
 É possível excluir e atualizar o cadastro de sapatos em Estoque, porém é necessário ter **privilégios de administrador**.
 
-![Estoque](https://github.com/GabrielIDSM/Sapataria-Rio-Verde/blob/master/Imagens/EstoqueRM.png)
-
 ![Estoque](https://github.com/GabrielIDSM/Sapataria-Rio-Verde/blob/master/Imagens/ModEstoqueRM.png)
 
 ## Vendas e Vendedores
