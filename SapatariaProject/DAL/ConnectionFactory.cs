@@ -16,9 +16,9 @@ namespace SapatariaProject.DAL
         private MySqlDataReader dr;
         private MySqlCommandBuilder cb;
 
-        private String server = "localhost";
-        private String user = "root";
-        private String password = "LHUGR8YP";
+        private String server;
+        private String user;
+        private String password;
         private String database = "Sapataria";
 
         public void CreateConnection()
