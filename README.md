@@ -25,8 +25,14 @@ Linha 22 | Defina o valor da variável para o nome do **DATABASE** ( "Sapataria"
 Os Sapatos são cadastrados e tem seu estoque administrado pelo sistema. Toda vez que uma venda é feita o estoque é automaticamente atualizado.
 É possível excluir e atualizar o cadastro de sapatos em Estoque, porém é necessário ter **privilégios de administrador**.
 
+![Estoque](https://github.com/GabrielIDSM/Sapataria-Rio-Verde/blob/master/Imagens/EstoqueRM.png)
+
+![Estoque](https://github.com/GabrielIDSM/Sapataria-Rio-Verde/blob/master/Imagens/ModEstoqueRM.png)
+
 ## Vendas e Vendedores
 O Sistema de vendas é responsável por modificar no banco de dados as unidades disponíveis de cada produto e calcular o valor final da venda. Não é possível efetuar a venda de um produto sem unidades disponíveis em estoque.
+
+![Vendas](https://github.com/GabrielIDSM/Sapataria-Rio-Verde/blob/master/Imagens/VendaRM.png)
 
 ## Privilégios de Administrador
 Vendedores com privilégios de admnistrador podem fazer alteração nos registros do banco de dados. Cadastros de Vendedores, Clientes e Produtos podem ser criados, modificados e excluídos.
